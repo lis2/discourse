@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'gap_serializer'
-require_dependency 'post_serializer'
-require_dependency 'timeline_lookup'
+require 'gap_serializer'
+require 'post_serializer'
+require 'timeline_lookup'
 
 module PostStreamSerializerMixin
   def self.included(klass)

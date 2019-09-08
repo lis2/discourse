@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-require_dependency 'jobs/scheduled/ignored_users_summary'
+require 'jobs/scheduled/ignored_users_summary'
 
 describe Jobs::IgnoredUsersSummary do
   before do

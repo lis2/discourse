@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency "upload_recovery"
+require "upload_recovery"
 
 RSpec.describe UploadRecovery do
   fab!(:user) { Fabricate(:user) }

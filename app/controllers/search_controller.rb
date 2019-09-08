@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'search'
+require 'search'
 
 class SearchController < ApplicationController
 

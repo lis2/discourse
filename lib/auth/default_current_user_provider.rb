@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency "auth/current_user_provider"
-require_dependency "rate_limiter"
+require "auth/current_user_provider"
+require "rate_limiter"
 
 class Auth::DefaultCurrentUserProvider
 

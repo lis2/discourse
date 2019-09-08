@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'reviewable_score_type_serializer'
+require 'reviewable_score_type_serializer'
 
 class ReviewableScoreSerializer < ApplicationSerializer
 

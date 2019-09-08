@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'badge_type'
+require 'badge_type'
 
 describe BadgeType do
 

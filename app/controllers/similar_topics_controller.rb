@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'similar_topic_serializer'
-require_dependency 'search/grouped_search_results'
+require 'similar_topic_serializer'
+require 'search/grouped_search_results'
 
 class SimilarTopicsController < ApplicationController
 

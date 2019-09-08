@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'seed_data/categories'
-require_dependency 'seed_data/topics'
+require 'seed_data/categories'
+require 'seed_data/topics'
 
 class Admin::SiteTextsController < Admin::AdminController
 

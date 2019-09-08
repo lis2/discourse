@@ -3,9 +3,9 @@
 # Post processing that we can do after a post has already been cooked.
 # For example, inserting the onebox content, or image sizes/thumbnails.
 
-require_dependency 'url_helper'
-require_dependency 'pretty_text'
-require_dependency 'quote_comparer'
+require 'url_helper'
+require 'pretty_text'
+require 'quote_comparer'
 
 class CookedPostProcessor
   INLINE_ONEBOX_LOADING_CSS_CLASS = "inline-onebox-loading"

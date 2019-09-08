@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'reviewable'
+require 'reviewable'
 
 class ReviewableFlaggedPost < Reviewable
 

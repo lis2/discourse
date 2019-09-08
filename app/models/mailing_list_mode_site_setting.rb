@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'enum_site_setting'
+require 'enum_site_setting'
 
 class MailingListModeSiteSetting < EnumSiteSetting
   def self.valid_value?(val)

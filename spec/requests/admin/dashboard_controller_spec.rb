@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'discourse_version_check'
+require 'discourse_version_check'
 
 describe Admin::DashboardController do
   before do

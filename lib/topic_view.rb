@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_dependency 'guardian'
-require_dependency 'topic_query'
-require_dependency 'filter_best_posts'
-require_dependency 'gaps'
+require 'guardian'
+require 'topic_query'
+require 'filter_best_posts'
+require 'gaps'
 
 class TopicView
   MEGA_TOPIC_POSTS_COUNT = 10000

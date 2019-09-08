@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'topic_subtype'
+require 'topic_subtype'
 
 class Report
   # Change this line each time report format change

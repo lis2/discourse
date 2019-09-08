@@ -8,7 +8,7 @@
 #
 # It also adds an HTML part for the plain text body
 #
-require_dependency 'email/renderer'
+require 'email/renderer'
 require 'uri'
 require 'net/smtp'
 

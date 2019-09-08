@@ -71,12 +71,12 @@ module Discourse
     # this pattern is somewhat odd but the reloader gets very
     # confused here if we load the deps without `lib` it thinks
     # discourse.rb is under the discourse folder incorrectly
-    require_dependency 'lib/discourse'
-    require_dependency 'lib/es6_module_transpiler/rails'
-    require_dependency 'lib/js_locale_helper'
+    require './lib/discourse'
+    require './lib/es6_module_transpiler/rails'
+    require './lib/js_locale_helper'
 
     # tiny file needed by site settings
-    require_dependency 'lib/highlight_js/highlight_js'
+    require './lib/highlight_js/highlight_js'
 
     # mocha hates us, active_support/testing/mochaing.rb line 2 is requiring the wrong
     #  require, patched in source, on upgrade remove this
@@ -98,7 +98,8 @@ module Discourse
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += Dir["#{config.root}/app/serializers"]
     config.autoload_paths += Dir["#{config.root}/lib/each_validators"]
-    config.autoload_paths += Dir["#{config.root}/app"]
+    # config.autoload_paths += Dir["#{config.root}/app/jobs"]
+    # config.autoload_paths += Dir["#{config.root}/app"]
 
     if Rails.env.development? && !Sidekiq.server?
       config.autoload_paths += Dir["#{config.root}/lib"]
@@ -265,29 +266,29 @@ module Discourse
       config.assets.precompile << "#{file}.js"
     end
 
-    require_dependency 'stylesheet/manager'
-    require_dependency 'svg_sprite/svg_sprite'
+    require 'stylesheet/manager'
+    require 'svg_sprite/svg_sprite'
 
     config.after_initialize do
       # require common dependencies that are often required by plugins
       # in the past observers would load them as side-effects
       # correct behavior is for plugins to require stuff they need,
       # however it would be a risky and breaking change not to require here
-      require_dependency 'category'
-      require_dependency 'post'
-      require_dependency 'topic'
-      require_dependency 'user'
-      require_dependency 'post_action'
-      require_dependency 'post_revision'
-      require_dependency 'notification'
-      require_dependency 'topic_user'
-      require_dependency 'topic_view'
-      require_dependency 'topic_list'
-      require_dependency 'group'
-      require_dependency 'user_field'
-      require_dependency 'post_action_type'
+      require 'category'
+      require 'post'
+      require 'topic'
+      require 'user'
+      require 'post_action'
+      require 'post_revision'
+      require 'notification'
+      require 'topic_user'
+      require 'topic_view'
+      require 'topic_list'
+      require 'group'
+      require 'user_field'
+      require 'post_action_type'
       # Ensure that Discourse event triggers for web hooks are loaded
-      require_dependency 'web_hook'
+      require 'web_hook'
 
       # So open id logs somewhere sane
       OpenID::Util.logger = Rails.logger

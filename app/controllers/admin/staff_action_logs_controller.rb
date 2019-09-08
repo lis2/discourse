@@ -26,7 +26,7 @@ class Admin::StaffActionLogsController < Admin::AdminController
   end
 
   def diff
-    require_dependency "discourse_diff"
+    require "discourse_diff"
 
     @history = UserHistory.find(params[:id])
     prev = @history.previous_value

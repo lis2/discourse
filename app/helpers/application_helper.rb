@@ -2,14 +2,14 @@
 # frozen_string_literal: true
 require 'current_user'
 require 'canonical_url'
-require_dependency 'guardian'
-require_dependency 'unread'
-require_dependency 'age_words'
-require_dependency 'configurable_urls'
-require_dependency 'mobile_detection'
-require_dependency 'category_badge'
-require_dependency 'global_path'
-require_dependency 'emoji'
+require 'guardian'
+require 'unread'
+require 'age_words'
+require 'configurable_urls'
+require 'mobile_detection'
+require 'category_badge'
+require 'global_path'
+require 'emoji'
 
 module ApplicationHelper
   include CurrentUser

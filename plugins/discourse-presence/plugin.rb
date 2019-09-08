@@ -100,7 +100,7 @@ after_initialize do
 
   end
 
-  require_dependency "application_controller"
+  require "application_controller"
 
   class Presence::PresencesController < ::ApplicationController
     requires_plugin PLUGIN_NAME

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'oneboxer'
-require_dependency 'email_cook'
+require 'oneboxer'
+require 'email_cook'
 
 class PostAnalyzer
 

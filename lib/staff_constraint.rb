@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'current_user'
+require 'current_user'
 
 class StaffConstraint
 

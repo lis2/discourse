@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require_dependency 'reviewable_explanation_serializer'
+require 'reviewable_explanation_serializer'
 
 class ReviewablesController < ApplicationController
   requires_login

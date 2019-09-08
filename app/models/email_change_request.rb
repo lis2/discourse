@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'email_validator'
+require 'email_validator'
 
 class EmailChangeRequest < ActiveRecord::Base
   belongs_to :old_email_token, class_name: 'EmailToken'

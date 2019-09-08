@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency "freedom_patches/schema_migration_details"
+require "freedom_patches/schema_migration_details"
 
 describe FreedomPatches::SchemaMigrationDetails do
 

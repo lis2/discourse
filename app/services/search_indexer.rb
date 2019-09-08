@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require_dependency 'search'
+require 'search'
 
 class SearchIndexer
   INDEX_VERSION = 3

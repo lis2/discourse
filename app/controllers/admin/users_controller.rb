@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'user_destroyer'
-require_dependency 'admin_user_index_query'
-require_dependency 'admin_confirmation'
+require 'user_destroyer'
+require 'admin_user_index_query'
+require 'admin_confirmation'
 
 class Admin::UsersController < Admin::AdminController
 

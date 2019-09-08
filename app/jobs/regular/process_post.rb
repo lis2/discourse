@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'image_sizer'
-require_dependency 'cooked_post_processor'
+require 'cooked_post_processor'
 
 module Jobs
 

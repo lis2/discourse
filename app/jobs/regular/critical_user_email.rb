@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # base.rb uses this style of require, so maintain usage of it here
-require_dependency "#{Rails.root}/app/jobs/regular/user_email.rb"
+require "#{Rails.root}/app/jobs/regular/user_email.rb"
 
 module Jobs
   class CriticalUserEmail < UserEmail

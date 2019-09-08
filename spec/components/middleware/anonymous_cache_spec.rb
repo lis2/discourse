@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "rails_helper"
-require_dependency "middleware/anonymous_cache"
+require "middleware/anonymous_cache"
 
 describe Middleware::AnonymousCache::Helper do
 

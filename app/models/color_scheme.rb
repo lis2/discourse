@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'distributed_cache'
+require 'distributed_cache'
 
 class ColorScheme < ActiveRecord::Base
 

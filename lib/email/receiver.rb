@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require "digest"
-require_dependency "new_post_manager"
-require_dependency "html_to_markdown"
-require_dependency "plain_text_to_markdown"
-require_dependency "upload_creator"
-require_dependency "upload_markdown"
+require "new_post_manager"
+require "html_to_markdown"
+require "plain_text_to_markdown"
+require "upload_creator"
+require "upload_markdown"
 
 module Email
 

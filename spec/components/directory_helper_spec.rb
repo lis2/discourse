@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'directory_helper'
+require 'directory_helper'
 
 describe DirectoryHelper do
   class DummyClass

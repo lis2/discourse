@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'jobs/scheduled/grant_anniversary_badges'
+require 'jobs/scheduled/grant_anniversary_badges'
 
 module Jobs
 

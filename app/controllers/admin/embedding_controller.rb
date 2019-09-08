@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'embedding'
+require 'embedding'
 
 class Admin::EmbeddingController < Admin::AdminController
 

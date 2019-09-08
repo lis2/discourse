@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "db_helper"
+require "db_helper"
 
 module BackupRestore
 

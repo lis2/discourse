@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_dependency 'pretty_text'
-require_dependency 'rate_limiter'
-require_dependency 'post_revisor'
-require_dependency 'enum'
-require_dependency 'post_analyzer'
-require_dependency 'validators/post_validator'
-require_dependency 'plugin/filter'
+require 'pretty_text'
+require 'rate_limiter'
+require 'post_revisor'
+require 'enum'
+require 'post_analyzer'
+require 'validators/post_validator'
+require 'plugin/filter'
 
 require 'archetype'
 require 'digest/sha1'

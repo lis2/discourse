@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'enum'
-require_dependency 'notification_emailer'
+require 'enum'
+require 'notification_emailer'
 
 class Notification < ActiveRecord::Base
   belongs_to :user

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'letter_avatar'
-require_dependency 'upload_creator'
+require 'letter_avatar'
+require 'upload_creator'
 
 class UserAvatar < ActiveRecord::Base
   belongs_to :user

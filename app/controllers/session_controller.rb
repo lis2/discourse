@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_dependency 'rate_limiter'
-require_dependency 'single_sign_on'
-require_dependency 'single_sign_on_provider'
-require_dependency 'url_helper'
+require 'rate_limiter'
+require 'single_sign_on'
+require 'single_sign_on_provider'
+require 'url_helper'
 
 class SessionController < ApplicationController
   class LocalLoginNotAllowed < StandardError; end

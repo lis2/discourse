@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require_dependency 'topic_view'
-require_dependency 'promotion'
-require_dependency 'url_helper'
-require_dependency 'topics_bulk_action'
-require_dependency 'discourse_event'
-require_dependency 'rate_limiter'
-require_dependency 'topic_publisher'
-require_dependency 'post_action_destroyer'
+require 'topic_view'
+require 'promotion'
+require 'url_helper'
+require 'topics_bulk_action'
+require 'discourse_event'
+require 'rate_limiter'
+require 'topic_publisher'
+require 'post_action_destroyer'
 
 class TopicsController < ApplicationController
   requires_login only: [

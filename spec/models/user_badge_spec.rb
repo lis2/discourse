@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'user_badge'
+require 'user_badge'
 
 describe UserBadge do
 

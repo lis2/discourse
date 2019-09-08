@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'theme_store/git_importer'
-require_dependency 'theme_store/tgz_importer'
-require_dependency 'upload_creator'
+require 'theme_store/git_importer'
+require 'theme_store/tgz_importer'
+require 'upload_creator'
 
 class RemoteTheme < ActiveRecord::Base
   METADATA_PROPERTIES = %i{

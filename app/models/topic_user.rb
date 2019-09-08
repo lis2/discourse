@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'notification_levels'
+require 'notification_levels'
 
 class TopicUser < ActiveRecord::Base
   belongs_to :user

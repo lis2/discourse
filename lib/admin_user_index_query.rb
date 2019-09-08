@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'trust_level'
+require 'trust_level'
 
 class AdminUserIndexQuery
 

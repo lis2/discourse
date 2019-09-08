@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'jobs/base'
-require_dependency 'jobs/regular/process_post'
+require 'jobs/base'
+require 'jobs/regular/process_post'
 
 describe Jobs::NotifyMovedPosts do
 

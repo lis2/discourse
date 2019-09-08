@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'wizard'
-require_dependency 'wizard/builder'
-require_dependency 'wizard/step_updater'
+require 'wizard'
+require 'wizard/builder'
+require 'wizard/step_updater'
 
 describe Wizard::StepUpdater do
   before do

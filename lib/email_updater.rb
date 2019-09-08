@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'email'
-require_dependency 'has_errors'
-require_dependency 'email_validator'
+require 'email'
+require 'has_errors'
+require 'email_validator'
 
 class EmailUpdater
   include HasErrors

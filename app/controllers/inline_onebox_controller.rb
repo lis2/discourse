@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'inline_oneboxer'
+require 'inline_oneboxer'
 
 class InlineOneboxController < ApplicationController
   requires_login

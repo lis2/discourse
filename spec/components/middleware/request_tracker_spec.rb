@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "rails_helper"
-require_dependency "middleware/request_tracker"
+require "middleware/request_tracker"
 
 describe Middleware::RequestTracker do
 

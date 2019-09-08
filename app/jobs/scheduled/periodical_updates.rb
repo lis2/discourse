@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'score_calculator'
+require 'score_calculator'
 
 module Jobs
 

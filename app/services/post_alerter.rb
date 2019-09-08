@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'distributed_mutex'
-require_dependency 'user_action_manager'
+require 'distributed_mutex'
+require 'user_action_manager'
 
 class PostAlerter
   def self.post_created(post, opts = {})

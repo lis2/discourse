@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'retrieve_title'
+require 'retrieve_title'
 
 describe RetrieveTitle do
 

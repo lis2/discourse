@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency "backup_restore/backup_store"
-require_dependency "s3_helper"
+require "backup_restore/backup_store"
+require "s3_helper"
 
 module BackupRestore
   class S3BackupStore < BackupStore

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module Jobs
-
   def self.queued
     Sidekiq::Stats.new.enqueued
   end
@@ -361,7 +360,3 @@ module Jobs
     end
   end
 end
-
-Dir["#{Rails.root}/app/jobs/onceoff/*.rb"].each { |file| require_dependency file }
-Dir["#{Rails.root}/app/jobs/regular/*.rb"].each { |file| require_dependency file }
-Dir["#{Rails.root}/app/jobs/scheduled/*.rb"].each { |file| require_dependency file }

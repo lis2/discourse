@@ -3,7 +3,7 @@
 #
 #  A wrapper around redis that namespaces keys with the current site id
 #
-require_dependency 'cache'
+require 'cache'
 
 class DiscourseRedis
   class FallbackHandler

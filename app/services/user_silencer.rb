@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'staff_message_format'
+require 'staff_message_format'
 
 class UserSilencer
 

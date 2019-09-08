@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'user'
+require 'user'
 
 class UsernameValidator
   # Public: Perform the validation of a field in a given object

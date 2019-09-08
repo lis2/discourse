@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'enum'
-require_dependency 'distributed_cache'
-require_dependency 'flag_settings'
+require 'enum'
+require 'distributed_cache'
+require 'flag_settings'
 
 class PostActionType < ActiveRecord::Base
   after_save :expire_cache

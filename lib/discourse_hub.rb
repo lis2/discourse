@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'discourse_version'
-require_dependency 'site_setting'
+require 'discourse_version'
+require 'site_setting'
 
 module DiscourseHub
 

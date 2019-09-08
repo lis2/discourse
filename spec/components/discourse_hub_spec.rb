@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'discourse_hub'
+require 'discourse_hub'
 
 describe DiscourseHub do
   describe '.discourse_version_check' do

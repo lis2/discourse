@@ -3,8 +3,8 @@
 require 'open-uri'
 require 'nokogiri'
 require 'excon'
-require_dependency 'retrieve_title'
-require_dependency 'topic_link'
+require 'retrieve_title'
+require 'topic_link'
 
 module Jobs
   class CrawlTopicLink < Jobs::Base

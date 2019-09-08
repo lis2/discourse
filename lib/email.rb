@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'mail'
-require_dependency 'email/message_builder'
-require_dependency 'email/renderer'
-require_dependency 'email/sender'
-require_dependency 'email/styles'
+require 'email/message_builder'
+require 'email/renderer'
+require 'email/sender'
+require 'email/styles'
 
 module Email
 

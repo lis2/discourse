@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'nokogiri'
-require_dependency 'url_helper'
+require 'nokogiri'
+require 'url_helper'
 
 class TopicEmbed < ActiveRecord::Base
   include Trashable

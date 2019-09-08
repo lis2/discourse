@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "upload_recovery"
+require "upload_recovery"
 
 module Jobs
   class PostUploadsRecovery < Jobs::OnceoffJob

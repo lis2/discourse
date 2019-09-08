@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'migration/safe_migrate'
+require 'migration/safe_migrate'
 
 describe Migration::SafeMigrate do
   before do

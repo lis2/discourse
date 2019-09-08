@@ -3,8 +3,8 @@
 require 'rails_helper'
 
 require 'guardian'
-require_dependency 'post_destroyer'
-require_dependency 'post_locker'
+require 'post_destroyer'
+require 'post_locker'
 
 describe Guardian do
 

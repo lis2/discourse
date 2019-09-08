@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'uri'
-require_dependency "onebox/discourse_onebox_sanitize_config"
-require_dependency 'final_destination'
+require "onebox/discourse_onebox_sanitize_config"
+require 'final_destination'
 
 Dir["#{Rails.root}/lib/onebox/engine/*_onebox.rb"].sort.each { |f| require f }
 

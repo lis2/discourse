@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'rate_limiter'
-require_dependency 'email_validator'
-require_dependency 'email_updater'
+require 'rate_limiter'
+require 'email_validator'
+require 'email_updater'
 
 class UsersEmailController < ApplicationController
 

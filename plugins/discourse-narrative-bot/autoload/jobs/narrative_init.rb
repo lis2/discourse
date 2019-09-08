@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'user'
+require 'user'
 
 module Jobs
   class NarrativeInit < Jobs::Base

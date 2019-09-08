@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'rate_limiter/limit_exceeded'
-require_dependency 'rate_limiter/on_create_record'
+require 'rate_limiter/limit_exceeded'
+require 'rate_limiter/on_create_record'
 
 # A redis backed rate limiter.
 class RateLimiter

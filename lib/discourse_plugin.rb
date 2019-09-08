@@ -21,7 +21,7 @@ class DiscoursePlugin
     mixins.each do |mixin|
       original_class = mixin.to_s.demodulize.sub("Mixin", "")
       dependency_file_name = original_class.underscore
-      require_dependency(dependency_file_name)
+      require(dependency_file_name)
       original_class.constantize.public_send(:include, mixin)
     end
   end

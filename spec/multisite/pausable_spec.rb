@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'sidekiq/pausable'
+require 'sidekiq/pausable'
 
 RSpec.describe "Pausing/Unpausing Sidekiq", type: :multisite do
 

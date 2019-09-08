@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'distributed_memoizer'
-require_dependency 'file_helper'
+require 'distributed_memoizer'
+require 'file_helper'
 
 class StaticController < ApplicationController
 

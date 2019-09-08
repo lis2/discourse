@@ -3,10 +3,10 @@
 require 'mini_racer'
 require 'nokogiri'
 require 'erb'
-require_dependency 'url_helper'
-require_dependency 'excerpt_parser'
-require_dependency 'discourse_tagging'
-require_dependency 'pretty_text/helpers'
+require 'url_helper'
+require 'excerpt_parser'
+require 'discourse_tagging'
+require 'pretty_text/helpers'
 
 module PrettyText
   @mutex = Mutex.new

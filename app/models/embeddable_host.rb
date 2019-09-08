@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'url_helper'
+require 'url_helper'
 
 class EmbeddableHost < ActiveRecord::Base
   validate :host_must_be_valid

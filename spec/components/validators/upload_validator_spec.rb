@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'validators/upload_validator'
+require 'validators/upload_validator'
 
 describe Validators::UploadValidator do
   subject(:validator) { described_class.new }

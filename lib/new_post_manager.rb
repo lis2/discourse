@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'post_creator'
-require_dependency 'new_post_result'
-require_dependency 'word_watcher'
+require 'post_creator'
+require 'new_post_result'
+require 'word_watcher'
 
 # Determines what actions should be taken with new posts.
 #

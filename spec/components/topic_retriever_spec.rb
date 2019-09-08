@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'topic_retriever'
+require 'topic_retriever'
 
 describe TopicRetriever do
 

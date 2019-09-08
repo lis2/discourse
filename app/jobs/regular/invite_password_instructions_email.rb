@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'email/sender'
+require 'email/sender'
 
 module Jobs
 

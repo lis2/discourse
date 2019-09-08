@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency "mobile_detection"
-require_dependency "crawler_detection"
-require_dependency "guardian"
+require "mobile_detection"
+require "crawler_detection"
+require "guardian"
 
 module Middleware
   class AnonymousCache

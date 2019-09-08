@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "upload_fixer"
+require "upload_fixer"
 
 module Jobs
   class FixInvalidUploadExtensions < Jobs::OnceoffJob

@@ -10,9 +10,9 @@
 #   limit_once_per: (seconds) Limit sending the given type of message once every X seconds.
 #                   The default is 24 hours. Set to false to always send the message.
 
-require_dependency 'post_creator'
-require_dependency 'topic_subtype'
-require_dependency 'discourse'
+require 'post_creator'
+require 'topic_subtype'
+require 'discourse'
 
 class GroupMessage
 

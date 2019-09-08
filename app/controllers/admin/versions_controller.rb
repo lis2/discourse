@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'discourse_updates'
+require 'discourse_updates'
 
 class Admin::VersionsController < Admin::AdminController
   def show

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require "mini_mime"
-require_dependency 'upload_creator'
-require_dependency "file_store/local_store"
+require 'upload_creator'
+require "file_store/local_store"
 
 class UploadsController < ApplicationController
   requires_login except: [:show, :show_short]

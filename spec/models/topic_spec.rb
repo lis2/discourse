@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'post_destroyer'
+require 'post_destroyer'
 
 describe Topic do
   let(:now) { Time.zone.local(2013, 11, 20, 8, 0) }

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'category_serializer'
+require 'category_serializer'
 
 class CategoriesController < ApplicationController
 

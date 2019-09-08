@@ -1,9 +1,9 @@
 # -*- encoding : utf-8 -*-
 # frozen_string_literal: true
 
-require_dependency 'email'
-require_dependency 'enum'
-require_dependency 'user_name_suggester'
+require 'email'
+require 'enum'
+require 'user_name_suggester'
 
 class Users::OmniauthCallbacksController < ApplicationController
 

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'jobs/base'
+require 'jobs/base'
 
 describe Jobs::EnqueueDigestEmails do
 

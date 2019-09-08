@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'user_destroyer'
+require 'user_destroyer'
 
 module Jobs
   class FixPrimaryEmailsForStagedUsers < Jobs::OnceoffJob

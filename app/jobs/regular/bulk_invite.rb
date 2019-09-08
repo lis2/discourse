@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'system_message'
+require 'system_message'
 
 module Jobs
 

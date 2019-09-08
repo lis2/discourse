@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'timeline_lookup'
+require 'timeline_lookup'
 
 describe TimelineLookup do
   it "returns an empty array for empty input" do

@@ -3,7 +3,7 @@
 require "rails_helper"
 
 require "auth/authenticator"
-require_dependency "auth/result"
+require "auth/result"
 
 describe "users/omniauth_callbacks/complete.html.erb" do
 

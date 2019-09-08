@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'ip_addr'
+require 'ip_addr'
 
 # Responsible for destroying a User record
 class UserDestroyer

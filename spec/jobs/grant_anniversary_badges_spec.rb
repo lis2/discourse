@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'jobs/scheduled/grant_anniversary_badges'
+require 'jobs/scheduled/grant_anniversary_badges'
 
 describe Jobs::GrantAnniversaryBadges do
 

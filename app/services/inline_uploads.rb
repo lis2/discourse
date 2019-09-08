@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "pretty_text"
+require "pretty_text"
 
 class InlineUploads
   PLACEHOLDER = "__replace__"

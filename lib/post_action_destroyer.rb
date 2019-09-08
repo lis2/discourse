@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'post_action_result'
+require 'post_action_result'
 
 class PostActionDestroyer
   class DestroyResult < PostActionResult

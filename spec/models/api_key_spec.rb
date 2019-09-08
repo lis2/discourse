@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'api_key'
+require 'api_key'
 
 describe ApiKey do
   fab!(:user) { Fabricate(:user) }

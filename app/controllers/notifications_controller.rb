@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'notification_serializer'
+require 'notification_serializer'
 
 class NotificationsController < ApplicationController
 

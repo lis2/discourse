@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency "discourse_diff"
+require "discourse_diff"
 
 class PostRevision < ActiveRecord::Base
   belongs_to :post

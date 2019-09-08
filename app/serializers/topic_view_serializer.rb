@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'pinned_check'
-require_dependency 'new_post_manager'
+require 'pinned_check'
+require 'new_post_manager'
 
 class TopicViewSerializer < ApplicationSerializer
   include PostStreamSerializerMixin

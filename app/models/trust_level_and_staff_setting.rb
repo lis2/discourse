@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'enum_site_setting'
+require 'enum_site_setting'
 
 class TrustLevelAndStaffSetting < TrustLevelSetting
   def self.valid_value?(val)

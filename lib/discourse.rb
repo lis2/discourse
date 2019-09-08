@@ -2,16 +2,16 @@
 
 require 'cache'
 require 'open3'
-require_dependency 'route_format'
-require_dependency 'plugin/instance'
-require_dependency 'auth/default_current_user_provider'
-require_dependency 'discourse_version'
+require 'route_format'
+require 'plugin/instance'
+require 'auth/default_current_user_provider'
+require 'discourse_version'
 require 'digest/sha1'
 
 # Prevents errors with reloading dev with conditional includes
 if Rails.env.development?
-  require_dependency 'file_store/s3_store'
-  require_dependency 'file_store/local_store'
+  require 'file_store/s3_store'
+  require 'file_store/local_store'
 end
 
 module Discourse

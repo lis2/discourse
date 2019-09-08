@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'validators/post_validator'
+require 'validators/post_validator'
 
 describe Validators::PostValidator do
   fab!(:topic) { Fabricate(:topic) }

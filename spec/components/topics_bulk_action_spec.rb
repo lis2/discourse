@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'topics_bulk_action'
+require 'topics_bulk_action'
 
 describe TopicsBulkAction do
   fab!(:topic) { Fabricate(:topic) }

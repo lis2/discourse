@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'email/styles'
+require 'email/styles'
 
 module Email
   class Renderer

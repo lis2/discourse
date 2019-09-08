@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'distributed_mutex'
+require 'distributed_mutex'
 
 class EmailLog < ActiveRecord::Base
   CRITICAL_EMAIL_TYPES ||= Set.new %w{

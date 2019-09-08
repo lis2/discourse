@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This is used in topic lists
-require_dependency 'topic_poster'
+require 'topic_poster'
 
 class TopicPostersSummary
 

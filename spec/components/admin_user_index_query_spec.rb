@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'admin_user_index_query'
+require 'admin_user_index_query'
 
 describe AdminUserIndexQuery do
   def real_users(query)

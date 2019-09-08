@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'reviewable'
-require_dependency 'user_destroyer'
+require 'reviewable'
+require 'user_destroyer'
 
 class ReviewableQueuedPost < Reviewable
 

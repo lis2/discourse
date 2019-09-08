@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'url_helper'
-require_dependency 'file_helper'
-require_dependency 'upload_creator'
+require 'url_helper'
+require 'file_helper'
+require 'upload_creator'
 
 module Jobs
 

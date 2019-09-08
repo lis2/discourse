@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require_dependency 'distributed_cache'
-require_dependency 'stylesheet/compiler'
-require_dependency 'stylesheet/manager'
-require_dependency 'theme_settings_parser'
-require_dependency 'theme_settings_manager'
-require_dependency 'theme_translation_parser'
-require_dependency 'theme_translation_manager'
+require 'distributed_cache'
+require 'stylesheet/compiler'
+require 'stylesheet/manager'
+require 'theme_settings_parser'
+require 'theme_settings_manager'
+require 'theme_translation_parser'
+require 'theme_translation_manager'
 
 class Theme < ActiveRecord::Base
 

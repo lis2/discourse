@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'json_error'
+require 'json_error'
 
 shared_examples "a generic error" do
   let(:result) { creator.create_errors_json(obj) }

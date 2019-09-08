@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'stylesheet/common'
-require_dependency 'global_path'
+require 'stylesheet/common'
+require 'global_path'
 
 module Stylesheet
   class Importer < SassC::Importer

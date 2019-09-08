@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'html_to_markdown'
+require 'html_to_markdown'
 
 class ComposerController < ApplicationController
 

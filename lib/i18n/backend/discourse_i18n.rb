@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'i18n/backend/pluralization'
-require_dependency 'locale_site_setting'
+require 'locale_site_setting'
 
 module I18n
   module Backend

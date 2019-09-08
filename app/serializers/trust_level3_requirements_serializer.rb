@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'penalty_counts_serializer'
+require 'penalty_counts_serializer'
 
 class TrustLevel3RequirementsSerializer < ApplicationSerializer
 

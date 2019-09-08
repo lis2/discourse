@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_dependency 'discourse_hub'
-require_dependency 'user_name_suggester'
-require_dependency 'rate_limiter'
-require_dependency 'wizard'
-require_dependency 'wizard/builder'
-require_dependency 'admin_confirmation'
+require 'discourse_hub'
+require 'user_name_suggester'
+require 'rate_limiter'
+require 'wizard'
+require 'wizard/builder'
+require 'admin_confirmation'
 
 class UsersController < ApplicationController
 

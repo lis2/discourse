@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require_dependency 'new_post_manager'
-require_dependency 'post_creator'
-require_dependency 'post_action_destroyer'
-require_dependency 'post_destroyer'
-require_dependency 'post_merger'
-require_dependency 'distributed_memoizer'
-require_dependency 'new_post_result_serializer'
-require_dependency 'post_locker'
+require 'new_post_manager'
+require 'post_creator'
+require 'post_action_destroyer'
+require 'post_destroyer'
+require 'post_merger'
+require 'distributed_memoizer'
+require 'new_post_result_serializer'
+require 'post_locker'
 
 class PostsController < ApplicationController
 

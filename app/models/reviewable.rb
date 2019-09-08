@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require_dependency 'enum'
-require_dependency 'reviewable/actions'
-require_dependency 'reviewable/conversation'
-require_dependency 'reviewable/editable_fields'
-require_dependency 'reviewable/perform_result'
-require_dependency 'reviewable_serializer'
+require 'enum'
+require 'reviewable/actions'
+require 'reviewable/conversation'
+require 'reviewable/editable_fields'
+require 'reviewable/perform_result'
+require 'reviewable_serializer'
 
 class Reviewable < ActiveRecord::Base
   class UpdateConflict < StandardError; end

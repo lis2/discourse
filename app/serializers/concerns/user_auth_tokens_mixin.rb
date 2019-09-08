@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'browser_detection'
-require_dependency 'discourse_ip_info'
+require 'browser_detection'
+require 'discourse_ip_info'
 
 module UserAuthTokensMixin
   extend ActiveSupport::Concern

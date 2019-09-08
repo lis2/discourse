@@ -5,10 +5,10 @@
 #
 require 'digest/sha1'
 require 'excon'
-require_dependency 'final_destination'
-require_dependency 'post_creator'
-require_dependency 'post_revisor'
-require_dependency 'encodings'
+require 'final_destination'
+require 'post_creator'
+require 'post_revisor'
+require 'encodings'
 
 module Jobs
   class PollFeed < Jobs::Scheduled
@@ -41,8 +41,8 @@ module Jobs
     def ensure_rss_loaded
       return if @@rss_loaded
       require 'rss'
-      require_dependency 'feed_item_accessor'
-      require_dependency 'feed_element_installer'
+      require 'feed_item_accessor'
+      require 'feed_element_installer'
       @@rss_loaded = true
     end
 

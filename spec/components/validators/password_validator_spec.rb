@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency "common_passwords/common_passwords"
+require "common_passwords/common_passwords"
 
 describe PasswordValidator do
 

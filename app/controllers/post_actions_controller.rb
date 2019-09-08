@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'discourse'
+require 'discourse'
 
 class PostActionsController < ApplicationController
   requires_login

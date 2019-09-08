@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'email/sender'
-require_dependency 'topic_retriever'
+require 'email/sender'
+require 'topic_retriever'
 
 module Jobs
 

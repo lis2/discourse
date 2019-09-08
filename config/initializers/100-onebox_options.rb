@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'twitter_api'
+require 'twitter_api'
 
 Onebox.options = {
   twitter_client: TwitterApi,

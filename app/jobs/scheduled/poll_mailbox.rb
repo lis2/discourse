@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require 'net/pop'
-require_dependency 'email/receiver'
-require_dependency 'email/processor'
-require_dependency 'email/sender'
-require_dependency 'email/message_builder'
+require 'email/receiver'
+require 'email/processor'
+require 'email/sender'
+require 'email/message_builder'
 
 module Jobs
   class PollMailbox < Jobs::Scheduled

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require_dependency 'site_settings/validations'
-require_dependency 'enum'
+require 'site_settings/validations'
+require 'enum'
 
 module SiteSettings; end
 

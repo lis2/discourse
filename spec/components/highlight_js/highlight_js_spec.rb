@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'highlight_js/highlight_js'
+require 'highlight_js/highlight_js'
 
 describe HighlightJs do
   it 'can list languages' do

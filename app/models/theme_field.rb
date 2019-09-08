@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_dependency 'theme_settings_parser'
-require_dependency 'theme_translation_parser'
-require_dependency 'theme_javascript_compiler'
+require 'theme_settings_parser'
+require 'theme_translation_parser'
+require 'theme_javascript_compiler'
 
 class ThemeField < ActiveRecord::Base
 

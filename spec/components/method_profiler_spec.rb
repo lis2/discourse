@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require_dependency 'method_profiler'
+require 'method_profiler'
 
 describe MethodProfiler do
   class Sneetch

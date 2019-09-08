@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'flag_query'
+require 'flag_query'
 
 module Jobs
 

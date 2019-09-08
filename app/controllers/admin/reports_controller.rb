@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'report'
+require 'report'
 
 class Admin::ReportsController < Admin::AdminController
   def index

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'retrieve_title'
+require 'retrieve_title'
 
 class InlineOneboxer
 

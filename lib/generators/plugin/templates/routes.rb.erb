@@ -1,4 +1,4 @@
-require_dependency "<%= underscored_name %>_constraint"
+require "<%= underscored_name %>_constraint"
 
 <%= classified_name %>::Engine.routes.draw do
   get "/" => "<%= dasherized_name %>#index", constraints: <%= classified_name %>Constraint.new

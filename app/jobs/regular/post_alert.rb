@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'post_alerter'
+require 'post_alerter'
 
 module Jobs
   class PostAlert < Jobs::Base

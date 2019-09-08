@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require "digest/sha1"
-require_dependency "file_helper"
-require_dependency "url_helper"
-require_dependency "db_helper"
-require_dependency "validators/upload_validator"
-require_dependency "file_store/local_store"
-require_dependency "base62"
+require "file_helper"
+require "url_helper"
+require "db_helper"
+require "validators/upload_validator"
+require "file_store/local_store"
+require "base62"
 
 class Upload < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
