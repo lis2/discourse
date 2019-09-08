@@ -5,7 +5,7 @@ require 'open3'
 require_dependency 'route_format'
 require_dependency 'plugin/instance'
 require_dependency 'auth/default_current_user_provider'
-require_dependency 'version'
+require_dependency 'discourse_version'
 require 'digest/sha1'
 
 # Prevents errors with reloading dev with conditional includes
@@ -166,8 +166,8 @@ module Discourse
 
     @plugins = []
     all_plugins.each do |p|
-      v = p.metadata.required_version || Discourse::VERSION::STRING
-      if Discourse.has_needed_version?(Discourse::VERSION::STRING, v)
+      v = p.metadata.required_version || DiscourseVersion::VERSION::STRING
+      if DiscourseVersion.has_needed_version?(DiscourseVersion::VERSION::STRING, v)
         p.activate!
         @plugins << p
       else
@@ -455,7 +455,7 @@ module Discourse
 
   def self.ensure_version_file_loaded
     unless @version_file_loaded
-      version_file = "#{Rails.root}/config/version.rb"
+      version_file = "#{Rails.root}/config/discourse_version.rb"
       require version_file if File.exists?(version_file)
       @version_file_loaded = true
     end
@@ -466,7 +466,7 @@ module Discourse
     $git_version ||=
       begin
         git_cmd = 'git rev-parse HEAD'
-        self.try_git(git_cmd, Discourse::VERSION::STRING)
+        self.try_git(git_cmd, DiscourseVersion::VERSION::STRING)
       end
   end
 

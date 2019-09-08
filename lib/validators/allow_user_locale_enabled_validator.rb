@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class AllowUserLocaleEnabledValidator
+module Validators; end
+class Validators::AllowUserLocaleEnabledValidator
 
   def initialize(opts = {})
     @opts = opts

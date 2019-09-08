@@ -2,7 +2,7 @@
 
 module Jobs
 
-  class MigrateFeaturedLinks < Jobs::Onceoff
+  class MigrateFeaturedLinks < Jobs::OnceoffJob
 
     def execute_onceoff(args)
       TopicCustomField.where(name: "featured_link").find_each do |tcf|

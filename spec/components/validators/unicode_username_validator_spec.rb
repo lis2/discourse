@@ -2,7 +2,8 @@
 
 require 'rails_helper'
 
-describe UnicodeUsernameValidator do
+module Validators; end
+describe Validators::UnicodeUsernameValidator do
   subject { described_class.new }
 
   it "disallows Unicode usernames when external system avatars are disabled" do

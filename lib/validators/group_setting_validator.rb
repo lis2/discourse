@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class GroupSettingValidator
+module Validators; end
+class Validators::GroupSettingValidator
 
   def initialize(opts = {})
     @opts = opts

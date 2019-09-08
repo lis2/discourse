@@ -242,17 +242,17 @@ class SiteSettings::TypeSupervisor
   def validator_for(type_name)
     case type_name
     when self.class.types[:email]
-      EmailSettingValidator
+      Validators::EmailSettingValidator
     when self.class.types[:username]
-      UsernameSettingValidator
+      Validators::UsernameSettingValidator
     when self.class.types[:group]
-      GroupSettingValidator
+      Validators::GroupSettingValidator
     when self.class.types[:integer]
-      IntegerSettingValidator
+      Validators::IntegerSettingValidator
     when self.class.types[:regex]
-      RegexSettingValidator
+      Validators::RegexSettingValidator
     when self.class.types[:string], self.class.types[:list], self.class.types[:enum]
-      StringSettingValidator
+      Validators::StringSettingValidator
     else nil
     end
   end

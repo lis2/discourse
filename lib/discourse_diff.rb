@@ -14,8 +14,8 @@ class DiscourseDiff
     before_markdown = tokenize_line(CGI::escapeHTML(@before))
     after_markdown = tokenize_line(CGI::escapeHTML(@after))
 
-    @block_by_block_diff = ONPDiff.new(before_html, after_html).diff
-    @line_by_line_diff = ONPDiff.new(before_markdown, after_markdown).short_diff
+    @block_by_block_diff = Onpdiff.new(before_html, after_html).diff
+    @line_by_line_diff = Onpdiff.new(before_markdown, after_markdown).short_diff
   end
 
   def inline_html
@@ -38,7 +38,7 @@ class DiscourseDiff
         end
 
         if i + 1 < @block_by_block_diff.size && @block_by_block_diff[i + 1][1] == opposite_op_code
-          diff = ONPDiff.new(tokenize_html(@block_by_block_diff[first][0]), tokenize_html(@block_by_block_diff[second][0])).diff
+          diff = Onpdiff.new(tokenize_html(@block_by_block_diff[first][0]), tokenize_html(@block_by_block_diff[second][0])).diff
           inline << generate_inline_html(diff)
           i += 1
         else
@@ -75,7 +75,7 @@ class DiscourseDiff
         end
 
         if i + 1 < @block_by_block_diff.size && @block_by_block_diff[i + 1][1] == opposite_op_code
-          diff = ONPDiff.new(tokenize_html(@block_by_block_diff[first][0]), tokenize_html(@block_by_block_diff[second][0])).diff
+          diff = Onpdiff.new(tokenize_html(@block_by_block_diff[first][0]), tokenize_html(@block_by_block_diff[second][0])).diff
           deleted, inserted = generate_side_by_side_html(diff)
           left << deleted
           right << inserted
@@ -115,7 +115,7 @@ class DiscourseDiff
           if (before_tokens.size - after_tokens.size).abs > MAX_DIFFERENCE
             before_tokens, after_tokens = tokenize_line(@line_by_line_diff[first][0]), tokenize_line(@line_by_line_diff[second][0])
           end
-          diff = ONPDiff.new(before_tokens, after_tokens).short_diff
+          diff = Onpdiff.new(before_tokens, after_tokens).short_diff
           deleted, inserted = generate_side_by_side_markdown(diff)
           table << "<td class=\"diff-del\">#{deleted.join}</td>"
           table << "<td class=\"diff-ins\">#{inserted.join}</td>"

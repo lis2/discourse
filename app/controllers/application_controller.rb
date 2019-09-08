@@ -18,7 +18,7 @@ require_dependency 'read_only_header'
 
 class ApplicationController < ActionController::Base
   include CurrentUser
-  include CanonicalURL::ControllerExtensions
+  include CanonicalUrl::ControllerExtensions
   include JsonError
   include GlobalPath
   include Hijack

@@ -4,7 +4,7 @@ require_dependency 'jobs/scheduled/grant_anniversary_badges'
 
 module Jobs
 
-  class RetroGrantAnniversary < Jobs::Onceoff
+  class RetroGrantAnniversary < Jobs::OnceoffJob
     def execute_onceoff(args)
       return unless SiteSetting.enable_badges
 

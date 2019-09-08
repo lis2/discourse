@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class EnableLocalLoginsViaEmailValidator
+module Validators; end
+class Validators::EnableLocalLoginsViaEmailValidator
   def initialize(opts = {})
     @opts = opts
   end

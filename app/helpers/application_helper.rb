@@ -13,7 +13,7 @@ require_dependency 'emoji'
 
 module ApplicationHelper
   include CurrentUser
-  include CanonicalURL::Helpers
+  include CanonicalUrl::Helpers
   include ConfigurableUrls
   include GlobalPath
 

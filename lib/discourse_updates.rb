@@ -6,7 +6,7 @@ module DiscourseUpdates
 
     def check_version
       attrs = {
-        installed_version: Discourse::VERSION::STRING,
+        installed_version: DiscourseVersion::VERSION::STRING,
         installed_sha: (Discourse.git_version == 'unknown' ? nil : Discourse.git_version),
         installed_describe: Discourse.full_version,
         git_branch: Discourse.git_branch,
@@ -35,7 +35,7 @@ module DiscourseUpdates
 
         # Handle cases when version check data is old so we report something that makes sense
         if version_info.updated_at.nil? || # never performed a version check
-           last_installed_version != Discourse::VERSION::STRING || # upgraded since the last version check
+           last_installed_version != DiscourseVersion::VERSION::STRING || # upgraded since the last version check
            is_stale_data
 
           Jobs.enqueue(:version_check, all_sites: true)

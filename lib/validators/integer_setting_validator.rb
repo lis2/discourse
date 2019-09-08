@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class IntegerSettingValidator
+module Validators; end
+class Validators::IntegerSettingValidator
   def initialize(opts = {})
     @opts = opts
     @opts[:min] = 0 unless @opts[:min].present? || @opts[:hidden]

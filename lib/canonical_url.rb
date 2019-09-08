@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module CanonicalURL
+module CanonicalUrl
   module ControllerExtensions
     def canonical_url(url_for_options = {})
       case url_for_options

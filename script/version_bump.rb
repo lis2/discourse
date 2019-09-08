@@ -4,7 +4,7 @@
 #
 # Increases the version. e.g., from 0.8.5 to 0.8.6.
 # If you want to bump the minor or major version numbers, do it manually
-# or edit lib/version.rb before running this file.
+# or edit lib/discourse_version.rb before running this file.
 
 usage = <<-END
 
@@ -27,7 +27,7 @@ usage = <<-END
 
   END
 
-VERSION_FILE_PATH = File.expand_path('../../lib/version.rb',  __FILE__)
+VERSION_FILE_PATH = File.expand_path('../../lib/discourse_version.rb',  __FILE__)
 
 if ARGV.length < 1
   puts usage
@@ -66,13 +66,13 @@ end
 
 require File.expand_path('../../lib/version',  __FILE__)
 
-version = Discourse::VERSION::STRING
+version = DiscourseVersion::VERSION::STRING
 puts "New version is: #{version}"
 
 unless ARGV.include?('no-commit') || !update_version_file
   puts "Committing..."
 
-  `git add lib/version.rb`
+  `git add lib/discourse_version.rb`
   `git commit -m "Version bump to v#{version}"`
   sha = `git rev-parse HEAD`.strip
   `git tag -d latest-release`

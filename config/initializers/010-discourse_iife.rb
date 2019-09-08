@@ -7,6 +7,6 @@ Rails.application.config.assets.configure do |env|
 
   unless Rails.env.production? || ENV["DISABLE_EVAL"]
     require 'source_url'
-    env.register_postprocessor('application/javascript', SourceURL)
+    env.register_postprocessor('application/javascript', SourceUrl)
   end
 end

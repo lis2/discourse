@@ -204,7 +204,7 @@ class AdminDashboardData
   end
 
   def pop3_polling_configuration
-    POP3PollingEnabledSettingValidator.new.error_message if SiteSetting.pop3_polling_enabled
+    Pop3PollingEnabledSettingValidator.new.error_message if SiteSetting.pop3_polling_enabled
   end
 
   def email_polling_errored_recently

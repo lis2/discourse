@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class UnicodeUsernameValidator
+module Validators; end
+class Validators::UnicodeUsernameValidator
   def initialize(opts = {})
     @opts = opts
   end

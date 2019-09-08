@@ -3,7 +3,7 @@
 require 'rails_helper'
 require 'version'
 
-describe Discourse::VERSION do
+describe DiscourseVersion::VERSION do
 
   context "has_needed_version?" do
 

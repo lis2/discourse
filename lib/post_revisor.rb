@@ -280,7 +280,7 @@ class PostRevisor
   end
 
   def diff_size(before, after)
-    ONPDiff.new(before, after).short_diff.sum do |str, type|
+    Onpdiff.new(before, after).short_diff.sum do |str, type|
       type == :common ? 0 : str.size
     end
   end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-module RegexSettingValidation
+module Validators; end
+module Validators::RegexSettingValidation
 
   def initialize_regex_opts(opts = {})
     @regex = Regexp.new(opts[:regex]) if opts[:regex]

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class EmailSettingValidator
+module Validators; end
+class Validators::EmailSettingValidator
   def initialize(opts = {})
     @opts = opts
   end

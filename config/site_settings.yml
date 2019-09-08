@@ -133,7 +133,7 @@ basic:
     default: false
   set_locale_from_accept_language_header:
     default: false
-    validator: "AllowUserLocaleEnabledValidator"
+    validator: "Validators::AllowUserLocaleEnabledValidator"
   support_mixed_text_direction:
     client: true
     default: false
@@ -177,7 +177,7 @@ basic:
     default: "latest|new|unread|top|categories"
     regex: "latest"
     regex_error: "site_settings.errors.must_include_latest"
-    validator: RegexPresenceValidator
+    validator: Validators::RegexPresenceValidator
     allow_any: false
     choices:
       - latest
@@ -317,7 +317,7 @@ login:
     refresh: true
     client: true
     default: false
-    validator: "EnableInviteOnlyValidator"
+    validator: "Validators::EnableInviteOnlyValidator"
   login_required:
     refresh: true
     client: true
@@ -331,7 +331,7 @@ login:
   enable_local_logins_via_email:
     client: true
     default: true
-    validator: "EnableLocalLoginsViaEmailValidator"
+    validator: "Validators::EnableLocalLoginsViaEmailValidator"
   allow_new_registrations:
     client: true
     default: true
@@ -403,7 +403,7 @@ login:
   enable_sso:
     client: true
     default: false
-    validator: "EnableSsoValidator"
+    validator: "Validators::EnableSsoValidator"
   sso_allows_all_return_paths: false
   enable_sso_provider: false
   verbose_sso_logging: false
@@ -431,7 +431,7 @@ login:
   sso_overrides_bio: false
   sso_overrides_email:
     default: false
-    validator: "SsoOverridesEmailValidator"
+    validator: "Validators::SsoOverridesEmailValidator"
     client: true
   sso_overrides_username: false
   sso_overrides_name: false
@@ -462,19 +462,19 @@ users:
     default: 3
     min: 1
     max: 60
-    validator: "MinUsernameLengthValidator"
+    validator: "Validators::MinUsernameLengthValidator"
   max_username_length:
     client: true
     default: 20
     min: 8
     max: 60
-    validator: "MaxUsernameLengthValidator"
+    validator: "Validators::MaxUsernameLengthValidator"
   unicode_usernames:
     default: false
     client: true
-    validator: "UnicodeUsernameValidator"
+    validator: "Validators::UnicodeUsernameValidator"
   unicode_username_character_whitelist:
-    validator: "UnicodeUsernameWhitelistValidator"
+    validator: "Validators::UnicodeUsernameWhitelistValidator"
     default: ""
     locale_default:
       cs: "[ěščřžýáíéóůúďťňĚŠČŘŽÝÁÍÉÓŮÚĎŤŇ]"
@@ -691,7 +691,7 @@ posting:
     hidden: true
     default: false
     client: true
-    validator: "EnablePrivateEmailMessagesValidator"
+    validator: "Validators::EnablePrivateEmailMessagesValidator"
   editing_grace_period: 300
   editing_grace_period_max_diff: 100
   editing_grace_period_max_diff_high_trust: 400
@@ -729,7 +729,7 @@ posting:
     client: true
     type: list
     list_type: compact
-    validator: "MarkdownTypographerQuotationMarksValidator"
+    validator: "Validators::MarkdownTypographerQuotationMarksValidator"
     default: "“|”|‘|’"
     locale_default:
       de: "„|“|‚|‘"
@@ -936,20 +936,20 @@ email:
   email_subject: "[%{site_name}] %{optional_pm}%{optional_cat}%{topic_title}"
   reply_by_email_enabled:
     default: false
-    validator: "ReplyByEmailEnabledValidator"
+    validator: "Validators::ReplyByEmailEnabledValidator"
   reply_by_email_address:
     default: ""
-    validator: "ReplyByEmailAddressValidator"
+    validator: "Validators::ReplyByEmailAddressValidator"
   alternative_reply_by_email_addresses:
     default: ""
-    validator: "AlternativeReplyByEmailAddressesValidator"
+    validator: "Validators::AlternativeReplyByEmailAddressesValidator"
   find_related_post_with_key:
     default: true
   manual_polling_enabled:
     default: false
   pop3_polling_enabled:
     default: false
-    validator: "POP3PollingEnabledSettingValidator"
+    validator: "Validators::Pop3PollingEnabledSettingValidator"
   pop3_polling_ssl: true
   pop3_polling_openssl_verify: true
   pop3_polling_period_mins: 5
@@ -1186,7 +1186,7 @@ files:
     default: true
     client: true
     shadowed_by_global: true
-    validator: "ExternalSystemAvatarsValidator"
+    validator: "Validators::ExternalSystemAvatarsValidator"
   external_system_avatars_url:
     default: "/letter_avatar_proxy/v4/letter/{first_letter}/{color}/{size}.png"
     client: true
@@ -1196,7 +1196,7 @@ files:
     default: ""
     type: list
     list_type: compact
-    validator: "ColorListValidator"
+    validator: "Validators::ColorListValidator"
   selectable_avatars_enabled:
     default: false
     client: true
@@ -1726,19 +1726,19 @@ search:
   category_search_priority_very_low_weight:
     default: 0.6
     hidden: true
-    validator: "CategorySearchPriorityWeightsValidator"
+    validator: "Validators::CategorySearchPriorityWeightsValidator"
   category_search_priority_low_weight:
     default: 0.8
     hidden: true
-    validator: "CategorySearchPriorityWeightsValidator"
+    validator: "Validators::CategorySearchPriorityWeightsValidator"
   category_search_priority_high_weight:
     default: 1.2
     hidden: true
-    validator: "CategorySearchPriorityWeightsValidator"
+    validator: "Validators::CategorySearchPriorityWeightsValidator"
   category_search_priority_very_high_weight:
     default: 1.4
     hidden: true
-    validator: "CategorySearchPriorityWeightsValidator"
+    validator: "Validators::CategorySearchPriorityWeightsValidator"
 
 uncategorized:
   version_checks:

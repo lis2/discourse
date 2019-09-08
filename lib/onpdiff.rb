@@ -3,7 +3,7 @@
 # Use "An O(NP) Sequence Comparison Algorithm" as described by Sun Wu, Udi Manber and Gene Myers
 # in https://publications.mpi-cbg.de/Wu_1990_6334.pdf
 
-class ONPDiff
+class Onpdiff
 
   def initialize(a, b)
     @a, @b = a, b

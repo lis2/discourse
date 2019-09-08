@@ -34,7 +34,7 @@ describe Admin::VersionsController do
         get "/admin/version_check.json"
         json = JSON.parse(response.body)
         expect(response.status).to eq(200)
-        expect(json['installed_version']).to eq(Discourse::VERSION::STRING)
+        expect(json['installed_version']).to eq(DiscourseVersion::VERSION::STRING)
       end
     end
   end

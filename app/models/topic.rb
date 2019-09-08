@@ -381,7 +381,7 @@ class Topic < ActiveRecord::Base
 
     if !!opts[:top_order]
       topics = topics.joins("LEFT OUTER JOIN top_topics ON top_topics.topic_id = topics.id")
-        .order(TopicQuerySQL.order_top_with_notification_levels(score))
+        .order(TopicQuerySql.order_top_with_notification_levels(score))
     end
 
     if opts[:limit]

@@ -93,11 +93,11 @@ module Discourse
     # issue is image_optim crashes on missing dependencies
     config.assets.image_optim = false
 
-    config.autoloader = :classic
+    config.autoloader = :zeitwerk
 
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += Dir["#{config.root}/app/serializers"]
-    config.autoload_paths += Dir["#{config.root}/lib/validators/"]
+    config.autoload_paths += Dir["#{config.root}/lib/each_validators"]
     config.autoload_paths += Dir["#{config.root}/app"]
 
     if Rails.env.development? && !Sidekiq.server?

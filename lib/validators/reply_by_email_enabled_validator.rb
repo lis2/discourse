@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class ReplyByEmailEnabledValidator
+module Validators; end
+class Validators::ReplyByEmailEnabledValidator
 
   def initialize(opts = {})
     @opts = opts
@@ -21,5 +22,4 @@ class ReplyByEmailEnabledValidator
       I18n.t("site_settings.errors.email_polling_disabled")
     end
   end
-
 end

@@ -20,18 +20,18 @@ describe DiscourseUpdates do
 
   context 'version check was done at the current installed version' do
     before do
-      DiscourseUpdates.stubs(:last_installed_version).returns(Discourse::VERSION::STRING)
+      DiscourseUpdates.stubs(:last_installed_version).returns(DiscourseVersion::VERSION::STRING)
     end
 
     context 'a good version check request happened recently' do
       context 'and server is up-to-date' do
-        before { stub_data(Discourse::VERSION::STRING, 0, false, 12.hours.ago) }
+        before { stub_data(DiscourseVersion::VERSION::STRING, 0, false, 12.hours.ago) }
 
         it 'returns all the version fields' do
-          expect(subject.latest_version).to eq(Discourse::VERSION::STRING)
+          expect(subject.latest_version).to eq(DiscourseVersion::VERSION::STRING)
           expect(subject.missing_versions_count).to eq(0)
           expect(subject.critical_updates).to eq(false)
-          expect(subject.installed_version).to eq(Discourse::VERSION::STRING)
+          expect(subject.installed_version).to eq(DiscourseVersion::VERSION::STRING)
           expect(subject.stale_data).to eq(false)
         end
 
@@ -47,7 +47,7 @@ describe DiscourseUpdates do
           expect(subject.latest_version).to eq('0.9.0')
           expect(subject.missing_versions_count).to eq(2)
           expect(subject.critical_updates).to eq(false)
-          expect(subject.installed_version).to eq(Discourse::VERSION::STRING)
+          expect(subject.installed_version).to eq(DiscourseVersion::VERSION::STRING)
         end
 
         it 'returns the timestamp of the last version check' do
@@ -60,7 +60,7 @@ describe DiscourseUpdates do
       before { stub_data(nil, nil, false, nil) }
 
       it 'returns the installed version' do
-        expect(subject.installed_version).to eq(Discourse::VERSION::STRING)
+        expect(subject.installed_version).to eq(DiscourseVersion::VERSION::STRING)
       end
 
       it 'indicates that version check has not been performed' do
@@ -99,7 +99,7 @@ describe DiscourseUpdates do
       end
 
       context 'installed is latest' do
-        before { stub_data(Discourse::VERSION::STRING, 1, false, 8.hours.ago) }
+        before { stub_data(DiscourseVersion::VERSION::STRING, 1, false, 8.hours.ago) }
         include_examples "queue version check and report that version is ok"
       end
 

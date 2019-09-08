@@ -2,7 +2,8 @@
 
 require "net/pop"
 
-class POP3PollingEnabledSettingValidator
+module Validators; end
+class Validators::Pop3PollingEnabledSettingValidator
 
   def initialize(opts = {})
     @opts = opts

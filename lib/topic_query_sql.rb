@@ -2,7 +2,7 @@
 #
 #  SQL fragments used when querying a list of topics.
 #
-module TopicQuerySQL
+module TopicQuerySql
 
   class << self
 

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-class RegexPresenceValidator
-  include RegexSettingValidation
+module Validators; end
+class Validators::RegexPresenceValidator
+  include Validators::RegexSettingValidation
 
   def initialize(opts = {})
     @opts = opts

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class MaxUsernameLengthValidator
+module Validators; end
+class Validators::MaxUsernameLengthValidator
   def initialize(opts = {})
     @opts = opts
   end

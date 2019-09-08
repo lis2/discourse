@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class EnableInviteOnlyValidator
+module Validators; end
+class Validators::EnableInviteOnlyValidator
   def initialize(opts = {})
     @opts = opts
   end

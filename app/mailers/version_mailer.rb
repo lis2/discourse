@@ -13,12 +13,12 @@ class VersionMailer < ActionMailer::Base
                      template: 'new_version_mailer_with_notes',
                      notes: missing_versions.first['notes'],
                      new_version: DiscourseUpdates.latest_version,
-                     installed_version: Discourse::VERSION::STRING)
+                     installed_version: DiscourseVersion::VERSION::STRING)
       else
         build_email(SiteSetting.contact_email,
                      template: 'new_version_mailer',
                      new_version: DiscourseUpdates.latest_version,
-                     installed_version: Discourse::VERSION::STRING)
+                     installed_version: DiscourseVersion::VERSION::STRING)
       end
     end
   end

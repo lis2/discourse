@@ -142,7 +142,7 @@ module Jobs
         'Content-Length' => web_hook_body.bytesize,
         'Content-Type' => content_type,
         'Host' => uri.host,
-        'User-Agent' => "Discourse/#{Discourse::VERSION::STRING}",
+        'User-Agent' => "Discourse/#{DiscourseVersion::VERSION::STRING}",
         'X-Discourse-Instance' => Discourse.base_url,
         'X-Discourse-Event-Id' => web_hook_event.id,
         'X-Discourse-Event-Type' => @arguments[:event_type]

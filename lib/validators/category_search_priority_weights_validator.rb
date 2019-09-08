@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class CategorySearchPriorityWeightsValidator
+module Validators; end
+class Validators::CategorySearchPriorityWeightsValidator
   def initialize(opts = {})
     @name = opts[:name].to_s
   end

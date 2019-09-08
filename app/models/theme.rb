@@ -183,11 +183,11 @@ class Theme < ActiveRecord::Base
 
   def supported?
     if minimum_version = remote_theme&.minimum_discourse_version
-      return false unless Discourse.has_needed_version?(Discourse::VERSION::STRING, minimum_version)
+      return false unless Discourse.has_needed_version?(DiscourseVersion::VERSION::STRING, minimum_version)
     end
 
     if maximum_version = remote_theme&.maximum_discourse_version
-      return false unless Discourse.has_needed_version?(maximum_version, Discourse::VERSION::STRING)
+      return false unless Discourse.has_needed_version?(maximum_version, DiscourseVersion::VERSION::STRING)
     end
 
     true

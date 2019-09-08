@@ -26,7 +26,7 @@ class RemoteTheme < ActiveRecord::Base
     joins("JOIN themes ON themes.remote_theme_id = remote_themes.id").where.not(remote_url: "")
   }
 
-  validates_format_of :minimum_discourse_version, :maximum_discourse_version, with: Discourse::VERSION_REGEXP, allow_nil: true
+  validates_format_of :minimum_discourse_version, :maximum_discourse_version, with: DiscourseVersion::VERSION_REGEXP, allow_nil: true
 
   def self.extract_theme_info(importer)
     JSON.parse(importer["about.json"])

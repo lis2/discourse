@@ -280,9 +280,9 @@ class TopicQuery
     create_list(:top, unordered: true) do |topics|
       topics = topics.joins(:top_topic).where("top_topics.#{score} > 0")
       if period == :yearly && @user.try(:trust_level) == TrustLevel[0]
-        topics.order(TopicQuerySQL.order_top_with_pinned_category_for(score))
+        topics.order(TopicQuerySql.order_top_with_pinned_category_for(score))
       else
-        topics.order(TopicQuerySQL.order_top_for(score))
+        topics.order(TopicQuerySql.order_top_for(score))
       end
     end
   end
@@ -629,7 +629,7 @@ class TopicQuery
     # If we are sorting by category, actually use the name
     if sort_column == 'category_id'
       # TODO forces a table scan, slow
-      return result.references(:categories).order(TopicQuerySQL.order_by_category_sql(sort_dir))
+      return result.references(:categories).order(TopicQuerySql.order_by_category_sql(sort_dir))
     end
 
     if sort_column == 'op_likes'

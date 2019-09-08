@@ -13,7 +13,7 @@ module Jobs
           prev_missing_versions_count = DiscourseUpdates.missing_versions_count || 0
 
           json = DiscourseHub.discourse_version_check
-          DiscourseUpdates.last_installed_version = Discourse::VERSION::STRING
+          DiscourseUpdates.last_installed_version = DiscourseVersion::VERSION::STRING
           DiscourseUpdates.latest_version = json['latestVersion']
           DiscourseUpdates.critical_updates_available = json['criticalUpdates']
           DiscourseUpdates.missing_versions_count = json['missingVersionsCount']

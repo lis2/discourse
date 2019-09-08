@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class ExternalSystemAvatarsValidator
+module Validators; end
+class Validators::ExternalSystemAvatarsValidator
   def initialize(opts = {})
     @opts = opts
   end

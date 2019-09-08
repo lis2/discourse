@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class EnablePrivateEmailMessagesValidator
+module Validators; end
+class Validators::EnablePrivateEmailMessagesValidator
 
   def initialize(opts = {})
     @opts = opts

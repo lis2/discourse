@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class MarkdownTypographerQuotationMarksValidator
+module Validators; end
+class Validators::MarkdownTypographerQuotationMarksValidator
   QUOTE_COUNT = 4
 
   def initialize(opts = {})

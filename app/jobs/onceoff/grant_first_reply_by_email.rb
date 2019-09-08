@@ -2,7 +2,7 @@
 
 module Jobs
 
-  class GrantFirstReplyByEmail < Jobs::Onceoff
+  class GrantFirstReplyByEmail < Jobs::OnceoffJob
 
     def execute_onceoff(args)
       return unless SiteSetting.enable_badges

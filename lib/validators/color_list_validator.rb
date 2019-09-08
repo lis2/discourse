@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class ColorListValidator
+module Validators; end
+class Validators::ColorListValidator
   def initialize(opts = {})
     @opts = opts
   end

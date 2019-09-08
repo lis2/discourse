@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class RegexSettingValidator
+module Validators; end
+class Validators::RegexSettingValidator
 
   LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget sem non elit tincidunt rhoncus.'.freeze
 

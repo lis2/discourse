@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_dependency 'version'
+require_dependency 'discourse_version'
 require_dependency 'site_setting'
 
 module DiscourseHub
@@ -8,7 +8,7 @@ module DiscourseHub
   STATS_FETCHED_AT_KEY = "stats_fetched_at"
 
   def self.version_check_payload
-    default_payload = { installed_version: Discourse::VERSION::STRING }.merge!(Discourse.git_branch == "unknown" ? {} : { branch: Discourse.git_branch })
+    default_payload = { installed_version: DiscourseVersion::VERSION::STRING }.merge!(Discourse.git_branch == "unknown" ? {} : { branch: Discourse.git_branch })
     default_payload.merge!(get_payload)
   end
 

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class EnableSsoValidator
+module Validators; end
+class Validators::EnableSsoValidator
   def initialize(opts = {})
     @opts = opts
   end

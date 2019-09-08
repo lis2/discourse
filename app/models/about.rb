@@ -30,7 +30,7 @@ class About
   end
 
   def version
-    Discourse::VERSION::STRING
+    DiscourseVersion::VERSION::STRING
   end
 
   def https
