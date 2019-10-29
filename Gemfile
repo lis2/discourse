@@ -40,6 +40,7 @@ gem 'redis', '4.1.3'
 gem 'redis-namespace'
 
 gem 'active_model_serializers', '~> 0.8.3'
+gem 'fast_jsonapi'
 
 gem 'onebox', '1.9.20'
 
