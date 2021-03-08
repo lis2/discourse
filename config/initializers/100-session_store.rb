@@ -4,14 +4,16 @@
 #
 require_dependency 'discourse_cookie_store'
 
-if Rails.env == "development" && SiteSetting.force_https
-  STDERR.puts
-  STDERR.puts "WARNING: force_https is enabled in dev"
-  STDERR.puts "It is very unlikely you are running HTTPS in dev."
-  STDERR.puts "Without HTTPS your session cookie will not work"
-  STDERR.puts "Try: bin/rails c"
-  STDERR.puts "SiteSetting.force_https = false"
-  STDERR.puts
+Rails.configuration.to_prepare do
+  if Rails.env == "development" && SiteSetting.force_https
+    STDERR.puts
+    STDERR.puts "WARNING: force_https is enabled in dev"
+    STDERR.puts "It is very unlikely you are running HTTPS in dev."
+    STDERR.puts "Without HTTPS your session cookie will not work"
+    STDERR.puts "Try: bin/rails c"
+    STDERR.puts "SiteSetting.force_https = false"
+    STDERR.puts
+  end
 end
 
 Discourse::Application.config.session_store(

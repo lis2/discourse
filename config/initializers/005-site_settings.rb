@@ -19,10 +19,12 @@ end
 reload_settings = lambda {
   RailsMultisite::ConnectionManagement.safe_each_connection do
     begin
-      SiteSetting.refresh!
+      Rails.configuration.to_prepare do
+        SiteSetting.refresh!
 
-      unless String === SiteSetting.push_api_secret_key && SiteSetting.push_api_secret_key.length == 32
-        SiteSetting.push_api_secret_key = SecureRandom.hex
+        unless String === SiteSetting.push_api_secret_key && SiteSetting.push_api_secret_key.length == 32
+          SiteSetting.push_api_secret_key = SecureRandom.hex
+        end
       end
     rescue ActiveRecord::StatementInvalid
       # This will happen when migrating a new database

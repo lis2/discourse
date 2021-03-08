@@ -96,34 +96,36 @@ store.redis_prefix = Proc.new { redis.namespace }
 store.redis_raw_connection = redis.without_namespace
 severities = [Logger::WARN, Logger::ERROR, Logger::FATAL, Logger::UNKNOWN]
 
-RailsMultisite::ConnectionManagement.each_connection do
-  error_rate_per_minute = SiteSetting.alert_admins_if_errors_per_minute rescue 0
+Rails.configuration.to_prepare do
+  RailsMultisite::ConnectionManagement.each_connection do
+    error_rate_per_minute = SiteSetting.alert_admins_if_errors_per_minute rescue 0
 
-  if (error_rate_per_minute || 0) > 0
-    store.register_rate_limit_per_minute(severities, error_rate_per_minute) do |rate|
-      MessageBus.publish("/logs_error_rate_exceeded",
-        {
-          rate: rate,
-          duration: 'minute',
-          publish_at: Time.current.to_i
-        },
-        group_ids: [Group::AUTO_GROUPS[:admins]]
-      )
+    if (error_rate_per_minute || 0) > 0
+      store.register_rate_limit_per_minute(severities, error_rate_per_minute) do |rate|
+        MessageBus.publish("/logs_error_rate_exceeded",
+                           {
+                             rate: rate,
+                             duration: 'minute',
+                             publish_at: Time.current.to_i
+                           },
+                           group_ids: [Group::AUTO_GROUPS[:admins]]
+                          )
+      end
     end
-  end
 
-  error_rate_per_hour = SiteSetting.alert_admins_if_errors_per_hour rescue 0
+    error_rate_per_hour = SiteSetting.alert_admins_if_errors_per_hour rescue 0
 
-  if (error_rate_per_hour || 0) > 0
-    store.register_rate_limit_per_hour(severities, error_rate_per_hour) do |rate|
-      MessageBus.publish("/logs_error_rate_exceeded",
-        {
-          rate: rate,
-          duration: 'hour',
-          publish_at: Time.current.to_i,
-        },
-        group_ids: [Group::AUTO_GROUPS[:admins]]
-      )
+    if (error_rate_per_hour || 0) > 0
+      store.register_rate_limit_per_hour(severities, error_rate_per_hour) do |rate|
+        MessageBus.publish("/logs_error_rate_exceeded",
+                           {
+                             rate: rate,
+                             duration: 'hour',
+                             publish_at: Time.current.to_i,
+                           },
+                           group_ids: [Group::AUTO_GROUPS[:admins]]
+                          )
+      end
     end
   end
 end

@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
 # Ensure that scheduled jobs are loaded before mini_scheduler is configured.
-if Rails.env == "development"
-  require "jobs/base"
+Rails.configuration.to_prepare do
+  if Rails.env == "development"
+    require "jobs/base"
 
-  Dir.glob("#{Rails.root}/app/jobs/scheduled/*.rb") do |f|
-    require(f)
+    Dir.glob("#{Rails.root}/app/jobs/scheduled/*.rb") do |f|
+      require(f)
+    end
   end
 end
 
