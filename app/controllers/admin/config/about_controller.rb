@@ -40,8 +40,7 @@ class Admin::Config::AboutController < Admin::AdminController
       SiteSetting::Update.call(
         guardian:,
         params: {
-          setting_name: name,
-          new_value: value,
+          settings: settings_map,
         },
         options: {
           allow_changing_hidden: %i[
